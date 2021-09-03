@@ -12620,25 +12620,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Matrix\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Edutecni-Note\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects.csproj",
+      "projectUniqueName": "E:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects.csproj",
       "projectName": "Mvc_BusinnesObjects",
-      "projectPath": "D:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects.csproj",
-      "packagesPath": "C:\\Users\\Matrix\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\obj\\",
+      "projectPath": "E:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects.csproj",
+      "packagesPath": "C:\\Users\\Edutecni-Note\\.nuget\\packages\\",
+      "outputPath": "E:\\Projetos\\Angular\\Mvc_BusinnesObjects\\Mvc_BusinnesObjects\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Matrix\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Edutecni-Note\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -12697,7 +12698,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
