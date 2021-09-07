@@ -40,6 +40,7 @@ E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\bin\Debug\netcoreapp
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\bin\Debug\netcoreapp2.1\Mvc_BusinnesObjects.pdb
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\bin\Debug\netcoreapp2.1\Mvc_BusinnesObjects.Views.dll
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\bin\Debug\netcoreapp2.1\Mvc_BusinnesObjects.Views.pdb
+E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.csproj.AssemblyReference.cache
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.GeneratedMSBuildEditorConfig.editorconfig
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.AssemblyInfoInputs.cache
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.AssemblyInfo.cs

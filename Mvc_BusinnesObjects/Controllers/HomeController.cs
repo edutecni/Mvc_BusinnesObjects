@@ -28,17 +28,17 @@ namespace Mvc_BusinnesObjects.Controllers
         {
 
             // Validando com ModelState
-            if (string.IsNullOrEmpty(aluno.Nome))
-                ModelState.AddModelError("Nome", "O Nome é obrigatório!");
+            //if (string.IsNullOrEmpty(aluno.Nome))
+            //    ModelState.AddModelError("Nome", "O Nome é obrigatório!");
 
-            if (string.IsNullOrEmpty(aluno.Sexo))
-                ModelState.AddModelError("Sexo", "O Sexo é obrigatório!");
+            //if (string.IsNullOrEmpty(aluno.Sexo))
+            //    ModelState.AddModelError("Sexo", "O Sexo é obrigatório!");
 
-            if (string.IsNullOrEmpty(aluno.Email))
-                ModelState.AddModelError("Email", "O Email é obrigatório!");
+            //if (string.IsNullOrEmpty(aluno.Email))
+            //    ModelState.AddModelError("Email", "O Email é obrigatório!");
 
-            if (aluno.Nascimento <= DateTime.Now.AddYears(-18))
-                ModelState.AddModelError("Nascimento", "Data de Nascimento inválida!");
+            //if (aluno.Nascimento <= DateTime.Now.AddYears(-18))
+            //    ModelState.AddModelError("Nascimento", "Data de Nascimento inválida!");
 
             if (!ModelState.IsValid)
             {
