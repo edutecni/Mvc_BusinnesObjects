@@ -8,5 +8,6 @@ namespace Mvc_BusinnesObjects.Models
     public interface IAlunoBLL
     {
         List<Aluno> GetAlunos();
+        void IncluirAluno(Aluno aluno);
     }
 }
