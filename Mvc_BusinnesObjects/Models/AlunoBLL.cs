@@ -23,9 +23,9 @@ namespace Mvc_BusinnesObjects.Models
             {
                 using (SqlConnection con = new SqlConnection(conexaoString))
                 {
-                    //SqlCommand cmd = new SqlCommand("GetAluno", con);
-                    SqlCommand cmd = new SqlCommand("Select * from Alunos", con);
-                    cmd.CommandType = CommandType.Text;
+                    SqlCommand cmd = new SqlCommand("GetAlunos", con);
+                    //SqlCommand cmd = new SqlCommand("Select * from Alunos", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
 

@@ -8,7 +8,7 @@ namespace Mvc_BusinnesObjects.Models
 {
     public class Aluno
     {
-        // Validações com DataAnotations
+        // Validações com DataAnnotations
         public int AlunoId { get; set; }        
 
         [Required(ErrorMessage = "O Nome deve ser informado!")]
