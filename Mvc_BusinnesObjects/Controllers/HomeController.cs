@@ -19,7 +19,7 @@ namespace Mvc_BusinnesObjects.Controllers
 
         [HttpGet]
         public IActionResult Create()
-        {            
+        {
             return View();
         }
 
@@ -27,9 +27,21 @@ namespace Mvc_BusinnesObjects.Controllers
         public IActionResult Create(Aluno aluno)
         {
 
-            if (aluno?.Nome == null || aluno?.Email == null || aluno?.Sexo == null)
+            // Validando com ModelState
+            if (string.IsNullOrEmpty(aluno.Nome))
+                ModelState.AddModelError("Nome", "O Nome é obrigatório!");
+
+            if (string.IsNullOrEmpty(aluno.Sexo))
+                ModelState.AddModelError("Sexo", "O Sexo é obrigatório!");
+
+            if (string.IsNullOrEmpty(aluno.Email))
+                ModelState.AddModelError("Email", "O Email é obrigatório!");
+
+            if (aluno.Nascimento <= DateTime.Now.AddYears(-18))
+                ModelState.AddModelError("Nascimento", "Data de Nascimento inválida!");
+
+            if (!ModelState.IsValid)
             {
-                ViewBag.Erro = "Dados Inválidos!";
                 return View();
             }
             else
@@ -39,6 +51,7 @@ namespace Mvc_BusinnesObjects.Controllers
 
                 return RedirectToAction("Index");
             }
+            
         }
 
         public IActionResult About()
