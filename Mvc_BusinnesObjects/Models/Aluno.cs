@@ -26,7 +26,7 @@ namespace Mvc_BusinnesObjects.Models
 
         [Required(ErrorMessage = "A Data de Nascimento deve ser informada!")]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
     }

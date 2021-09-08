@@ -12,11 +12,10 @@ namespace Mvc_BusinnesObjects.Models
 {
     public class AlunoBLL : IAlunoBLL
     {
+        private string conexaoString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Escola;Integrated Security=True";
+       
         public List<Aluno> GetAlunos()
-        {
-                
-            var conexaoString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Escola;Integrated Security=True";
-            
+        {   
             List<Aluno> alunos = new List<Aluno>();
 
             try
@@ -51,8 +50,6 @@ namespace Mvc_BusinnesObjects.Models
 
         public void IncluirAluno(Aluno aluno)
         {
-
-            var conexaoString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Escola;Integrated Security=True";
 
             try
             {
@@ -91,7 +88,54 @@ namespace Mvc_BusinnesObjects.Models
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+        }
 
+        public void AlterarAluno(Aluno aluno)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conexaoString))
+                {
+                    SqlCommand cmd = new SqlCommand("AlterarAluno", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter paramAlunoId = new SqlParameter();
+                    paramAlunoId.ParameterName = "@AlunoId";
+                    paramAlunoId.Value = aluno.AlunoId;
+                    cmd.Parameters.Add(paramAlunoId);
+
+                    SqlParameter paramNome = new SqlParameter();
+                    paramNome.ParameterName = "@Nome";
+                    paramNome.Value = aluno.Nome;
+                    cmd.Parameters.Add(paramNome);
+
+                    SqlParameter paramEmail = new SqlParameter();
+                    paramEmail.ParameterName = "@Email";
+                    paramEmail.Value = aluno.Email;
+                    cmd.Parameters.Add(paramEmail);
+
+                    SqlParameter paramSexo = new SqlParameter();
+                    paramSexo.ParameterName = "@Sexo";
+                    paramSexo.Value = aluno.Sexo;
+                    cmd.Parameters.Add(paramSexo);
+
+                    SqlParameter paramNascimento = new SqlParameter();
+                    paramNascimento.ParameterName = "@Nascimento";
+                    paramNascimento.Value = aluno.Nascimento;
+                    cmd.Parameters.Add(paramNascimento);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+
+                };
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }
