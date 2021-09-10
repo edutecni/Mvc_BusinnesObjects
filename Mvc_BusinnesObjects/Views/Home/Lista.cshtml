@@ -1,8 +1,5 @@
 ﻿@model IEnumerable<Mvc_BusinnesObjects.Models.Aluno>
 
-@{
-    Layout = null;
-}
 
 <!DOCTYPE html>
 
@@ -13,8 +10,26 @@
 </head>
 <body>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar Novo Aluno</a>
 </p>
+
+    <p>
+        @using (Html.BeginForm("Procurar", "Home", FormMethod.Get))
+            {
+        <table style="padding: 5px;" width="50%">
+            <tr>
+                <td width="4%">Procurar Por:</td>
+                <td width="1%">@Html.RadioButton("procurarPor", "Nome", true)</td>
+                <td width="2%"><text>Nome</text></td>
+                <td width="1%">@Html.RadioButton("procurarPor", "Email")</td>
+                <td width="2%"><text>Email</text></td>
+                <td width="1%">@Html.TextBox("criterio")</td>
+                <td width="4%"><input type="submit" value="Procurar" /></td>
+            </tr>
+        </table>
+            }
+    </p>
+
 <table class="table" border="1">
     <thead>
         <tr>
@@ -38,6 +53,9 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
+
+    using (Html.BeginForm("Delete", "Home", new { id = item.AlunoId }))
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.AlunoId)
@@ -55,11 +73,13 @@
                 @Html.DisplayFor(modelItem => item.Nascimento)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.AlunoId  }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id = item.AlunoId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.AlunoId }) |
+                @*@Html.ActionLink("Delete", "Delete", new {  id=item.AlunoId  })*@
+                <input type ="submit" value="Deletar" onclick="return confirm('Confirma a exclusão do aluno @item.AlunoId?');"
             </td>
         </tr>
+    }
 }
     </tbody>
 </table>

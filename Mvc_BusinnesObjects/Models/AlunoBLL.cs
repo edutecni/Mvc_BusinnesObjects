@@ -139,5 +139,33 @@ namespace Mvc_BusinnesObjects.Models
                 throw ex;
             }
         }
+
+        public void DeletarAluno(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conexaoString))
+                {
+                    SqlCommand cmd = new SqlCommand("DeletarAluno", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter paramAlunoId = new SqlParameter();
+                    paramAlunoId.ParameterName = "@AlunoId";
+                    paramAlunoId.Value = id;
+                    cmd.Parameters.Add(paramAlunoId);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+
+                };
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

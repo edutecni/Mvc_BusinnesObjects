@@ -69,3 +69,7 @@ E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.genruntimeconfig.cache
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.csproj.CopyComplete
 E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.cshtml.g.cs
+E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Mvc_BusinnesObjects.csproj.AssemblyReference.cache
+E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Razor\Views\Home\Delete.cshtml.g.cs
+E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.cshtml.g.cs
+E:\Projetos\Angular\Mvc_BusinnesObjects\Mvc_BusinnesObjects\obj\Debug\netcoreapp2.1\Razor\Views\Home\Procurar.cshtml.g.cs

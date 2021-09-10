@@ -10,5 +10,6 @@ namespace Mvc_BusinnesObjects.Models
         List<Aluno> GetAlunos();
         void IncluirAluno(Aluno aluno);
         void AlterarAluno(Aluno aluno);
+        void DeletarAluno(int id);
     }
 }

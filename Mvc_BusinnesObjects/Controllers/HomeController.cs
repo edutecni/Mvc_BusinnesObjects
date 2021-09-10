@@ -87,6 +87,54 @@ namespace Mvc_BusinnesObjects.Controllers
 
         }
 
+        //[HttpGet]
+        //public IActionResult Delete(int id)
+        //{
+        //    //alunoBLL.DeletarAluno(id);
+        //    //return RedirectToAction("Index");
+
+        //    var aluno2 = alunoBLL.GetAlunos().Single(a => a.AlunoId == id);
+
+        //    return View(aluno2);
+        //}
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            //alunoBLL.DeletarAluno(id);
+            //return RedirectToAction("Index");
+
+            alunoBLL.DeletarAluno(id);
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int id)
+        {
+            var aluno = alunoBLL.GetAlunos().Single(a => a.AlunoId == id);
+
+            return View(aluno);
+        }
+
+        public IActionResult Procurar(string procurarPor, string criterio)
+        {
+            if (criterio == null)
+            {
+                criterio = "";
+            }
+
+            if (procurarPor == "Email")
+            {
+                var aluno = alunoBLL.GetAlunos().SingleOrDefault(a => a.Email.ToLower() == criterio.ToLower());
+                return View(aluno);
+            }
+            else
+            {
+                var aluno = alunoBLL.GetAlunos().SingleOrDefault(a => a.Nome.ToLower() == criterio.ToLower());
+                return View(aluno);
+            }
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
