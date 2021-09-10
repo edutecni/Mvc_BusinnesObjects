@@ -36,6 +36,8 @@ namespace Mvc_BusinnesObjects.Models
                         aluno.Sexo = dr["Sexo"].ToString();
                         aluno.Email = dr["Email"].ToString();
                         aluno.Nascimento = dr["Email"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dr["Nascimento"]);
+                        aluno.Foto = dr["Foto"].ToString();
+                        aluno.Texto = dr["Texto"].ToString();
                         alunos.Add(aluno);
                     }
                 }
@@ -77,6 +79,16 @@ namespace Mvc_BusinnesObjects.Models
                     paramNascimento.ParameterName = "@Nascimento";
                     paramNascimento.Value = aluno.Nascimento;
                     cmd.Parameters.Add(paramNascimento);
+
+                    SqlParameter paramFoto = new SqlParameter();
+                    paramFoto.ParameterName = "@Foto";
+                    paramFoto.Value = aluno.Foto;
+                    cmd.Parameters.Add(paramFoto);
+
+                    SqlParameter paramTexto = new SqlParameter();
+                    paramTexto.ParameterName = "@Texto";
+                    paramTexto.Value = aluno.Texto;
+                    cmd.Parameters.Add(paramTexto);                    
 
                     con.Open();
 
@@ -125,6 +137,16 @@ namespace Mvc_BusinnesObjects.Models
                     paramNascimento.ParameterName = "@Nascimento";
                     paramNascimento.Value = aluno.Nascimento;
                     cmd.Parameters.Add(paramNascimento);
+
+                    SqlParameter paramFoto = new SqlParameter();
+                    paramFoto.ParameterName = "@Foto";
+                    paramFoto.Value = aluno.Foto;
+                    cmd.Parameters.Add(paramFoto);
+
+                    SqlParameter paramTexto = new SqlParameter();
+                    paramTexto.ParameterName = "@Texto";
+                    paramTexto.Value = aluno.Texto;
+                    cmd.Parameters.Add(paramTexto);
 
                     con.Open();
 

@@ -29,5 +29,8 @@ namespace Mvc_BusinnesObjects.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Nascimento { get; set; }
 
+        public string Foto { get; set; }
+        public string Texto { get; set; }
+
     }
 }
